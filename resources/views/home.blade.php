@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="ongkir-header">
-            <h1>CodeOngkir</h1>
+            <h1>CekOngkir</h1>
             <p class="lead">
                 Project Cek Ongkir ke Seluruh Kota dan Kabupaten di Indonesia
             </p>
@@ -73,7 +73,10 @@
                             <div class="form-group">
                                 <label for="">Provinsi</label>
                                 <select name="province_origin" id="" class="form-control">
-                                    <option value="#">-</option>
+                                    <option value="" selected>-</option>
+                                    @foreach ($province as $key => $value)
+                                    <option value="{{ $key }}">{{ $value }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
